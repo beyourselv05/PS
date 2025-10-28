@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-  int n;
+  int n, v;
   int arr[101];
-  int v;
+  int count = 0;
 
   scanf("%d", &n);
 
@@ -12,11 +12,9 @@ int main() {
   }
   scanf("%d", &v);
 
-  int res = 0; 
   for(int i = 0; i < n; i++) {
     if(arr[i] == v) 
-      res++;
+      count++;
   }
-
-  printf("%d", res);
+  printf("%d", count);
 }
