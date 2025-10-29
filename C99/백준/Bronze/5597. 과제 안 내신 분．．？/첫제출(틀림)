@@ -1,0 +1,33 @@
+//output
+//1l. 제출x학생중 가장 작은 출석번호 출력. (min)
+//2l. 그다음출석번호 출력.  (max)
+
+//key. 만약 숫자가 존재시 배열 요소에 1대입, 없다면 0, 비교 후 판단
+
+#include <stdio.h> 
+
+int student[30] = {0};
+int cnt[30] = {0};
+
+int main() {
+    for(int i=0; i<28; i++) {
+        scanf("%d", &student[i]);
+    }
+    for(int j=0; j<28; j++) {           
+        for(int k=0; k<30; k++) {       
+            if (j+1 == student[j]) {
+                cnt[j] = 1; 
+            }
+        }
+    }
+    
+    for(int i=0; i<30; i++) {
+        if (cnt[i] == 0) {
+            printf("%d\n", i+1);
+        }
+    }
+}
+
+
+//1 != k[0] = 3;
+//1 != k[1] = 1;
