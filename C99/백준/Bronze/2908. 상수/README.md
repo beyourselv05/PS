@@ -1,3 +1,4 @@
+### reference -> https://giken.tistory.com/entry/%EB%B0%B1%EC%A4%80c-2908%EB%B2%88-%EC%83%81%EC%88%98
 # [Bronze II] 상수 - 2908 
 
 [문제 링크](https://www.acmicpc.net/problem/2908) 
