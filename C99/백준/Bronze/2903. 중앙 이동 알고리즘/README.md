@@ -1,3 +1,5 @@
+## reference -> https://velog.io/@kimzion98/C-%EB%B0%B1%EC%A4%80-2903
+
 # [Bronze III] 중앙 이동 알고리즘 - 2903 
 
 [문제 링크](https://www.acmicpc.net/problem/2903) 
