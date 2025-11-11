@@ -10,6 +10,34 @@
 //3 2(P자루씩 최대몇묶음?, 그때 한자루씩 몇개?)
 //펜은 모자라도 됨.
 #include <stdio.h>
+
 int main() {
+    int p;
+    int shirt[6]={0};
+    int bart[2];
+    int sum1=0;
+    int sum2=0;
     
+    scanf("%d", &p);
+    
+    for(int i=0; i<6; i++) {
+        scanf("%d", &shirt[i]);
+    }
+    
+    scanf("%d %d", &bart[0], &bart[1]);     //(P자루씩 최대몇묶음?, 그때 한자루씩 몇개?)
+    int cnt=0;
+    
+    for(int j=0; j<6; j++) {
+        if(shirt[j] > bart[0]) {
+            shirt[j] = bart[0]*2;
+        }
+        else if(shirt[j] <= bart[0]){
+            shirt[j] = bart[0];
+        }
+        sum1 += shirt[j];
+        sum2 = sum1/bart[0];
+    }
+    
+    printf("%d", sum2);
+    printf("%d %d", p/bart[1], )
 }
