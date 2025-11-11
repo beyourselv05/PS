@@ -38,6 +38,6 @@ int main() {
         sum2 = sum1/bart[0];
     }
     
-    printf("%d", sum2);
-    printf("%d %d", p/bart[1], )
+    printf("%d\n", sum2);
+    printf("%d %d", p/bart[1], bart[1]/(p/bart[1]));
 }
