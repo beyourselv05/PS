@@ -17,6 +17,7 @@ int main() {
     scanf("%d", &N);
     int sum = 0;
     int digit = 0;  
+    int arr=0;
     
     if(N >= 1 && N <= 9) {          //한자리수
         printf("0");
@@ -24,22 +25,23 @@ int main() {
     
     if(N >= 10 && N <= 999,999) {   //core logic
         for(int i=0; i<54; i++) {
-            N -= i;     //N = 198
+            N = N - i;     //N = 198 (216-18)
             
             while(N!=0) {           //자릿수 판단
                 N = N / 10;
                 digit++;
             }
             
-            int arr = N;
+            arr = N;
+            printf("%d", arr);
             for(int j=0; j<digit; j++) {
                 int cnt = 10;
-                arr += N%10;  
+                arr = arr + N%10;  
                 N = N/10;
-                cnt *= cnt;
+                cnt = 10*cnt;
             }
         }
-        printf("%d", N);
+        printf("%d", arr);
     }
     
     if(N == 1000000) printf("1");   //백만
