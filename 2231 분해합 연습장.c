@@ -33,16 +33,20 @@ int main() {
     
     if(N >= 10 && N <= 999999) {   //core logic
         for(int i=0; i<54; i++) {
-            value = N - i;     //N = 198 (216-18)
-            int arr, arr1 = N;
+            value = N - i;     //value = 198 (216-18) (N-i)
+            int arr = value;
             for(int j=0; j<digit; j++) {        //각 요소 더하는 알고리즘 ex)1+9+8
                 int cnt = 10;
-                arr = arr + N%10;  
-                arr1 = arr1/10;
+                arr = arr + value%10;  
+                value = value/10;
                 cnt = 10*cnt;
+                if(N == (value-1)+arr) {
+                    printf("this is!!!%d", arr)
+                }
+                printf("arr : %d value : %d\n", arr, value);
             }
         }
-        printf("%d", value);
+        printf("last %d", value);
     }
     
     if(N == 1000000) printf("1");   //백만
@@ -75,4 +79,6 @@ ex) (<-> : 비교)
 
 입: 520
 출: 512 (512+8)
+
+
 */
