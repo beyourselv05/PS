@@ -10,7 +10,7 @@ int main() {
     int num_cnt = 0;
     
     scanf("%d", &n);        //13입력
-    
+    while(n >= num_cnt) {
         for(int j=0; j<cnt; j++) {
             num_cnt++;
             
@@ -22,8 +22,7 @@ int main() {
                 printf("%d", distance);
             }
         }
-    
-    
+    }
 }
 //변환점 1 -> 1개 / 2,3,4,5,6,7 -> 2개 / 8~19 -> 3개
 
