@@ -5,27 +5,36 @@
 #include <stdio.h>
 int main() {
     int n;
-    int cnt = 7;            //
+    int ini=2;                //initial
+    int cnt = 7;            //last
     int distance = 1;           //몇개의 방?
     int num_cnt = 0;
     
+    
     scanf("%d", &n);        //7입력
     while(n >= num_cnt) {
-        for(int j=2; j<=cnt; j++) {
+        for(int j=ini; j<=cnt; j++) {
             num_cnt++;
             
             if(n == num_cnt) {
                 printf("%d", distance+1);
             }
+            
             if(j/cnt == 1) {
                 cnt += ((distance+1)*6);        //end
-                j += ((distance)*6);          //start
+                ini += ((distance)*6);          //start
                 distance++;
                 break;
             }
         }
     }
 }
+//7 7
+//실행 후 cnt = 19
+//실행 후 j = 
+
+
+
 //2개 start:2   end:7
 //3개 start:8   end:19
 //4개 start:20  end:37
